@@ -1,3 +1,4 @@
+"""Main file to drive the API"""
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -28,8 +29,5 @@ def recommendations(types, flavor, effect):
         "types": types,
         "flavor": flavor,
         "effect": effect}
-    
     # modeling happens here
-    
     return form_inputs
-
