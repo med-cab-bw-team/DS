@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fasatapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
 api = FastAPI()
 
