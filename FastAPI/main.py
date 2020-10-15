@@ -1,6 +1,20 @@
 from fastapi import FastAPI
+from fasatapi.middleware.cors import CORSMiddleware
 
 api = FastAPI()
+
+origins = [
+    "http://localhost",
+    "https://your-page-here"
+]
+
+api.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 
 @api.get("/")
@@ -18,3 +32,4 @@ def recommendations(types, flavor, effect):
     # modeling happens here
     
     return form_inputs
+
