@@ -11,6 +11,7 @@ fastapi = "*"
 python-dotenv = "*"
 dnspython = "*"
 uvicorn = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.8"
