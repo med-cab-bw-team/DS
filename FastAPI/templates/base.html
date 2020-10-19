@@ -9,9 +9,8 @@
       background-color: black;
       color: green;
     }
-    #one{
+    article{
       display: flex;
-      justify-content: flex-start;
     }
     input{
       color: black;
@@ -23,13 +22,9 @@
     <h1>{{ title }}</h1>
     <article>
     <div id="one">
-      <img src="static/images/pot.png" alt="Pot Leaf">
       <p><b>To many strains out there to choose from!?</b></p>
-      <br>
-      <br>
       <p>
-        When the choices are to overwhelming,
-        <br> come to the garden
+        When the choices are to overwhelming, come to the garden
         and let our A.I. farmer make the selection for you.
       </p>
       <form action="/recommendation" method="post">
@@ -38,6 +33,7 @@
       </form>
     </div>
     </article>
+    <img src="static/images/pot.png" alt="Pot Leaf">
     {% endblock %}
     <!-- <script src="https://cdn.jsdelivr.net/npm/umbrellajs"/> -->
   </body>
