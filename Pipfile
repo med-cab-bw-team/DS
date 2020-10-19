@@ -14,6 +14,7 @@ uvicorn = "*"
 flake8 = "*"
 osmapi = "*"
 jinja2 = "*"
+aiofiles = "*"
 
 [requires]
 python_version = "3.8"
