@@ -1,16 +1,10 @@
 """Main file to drive the API"""
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-
-# testing ##
-from pydantic import BaseModel
-class Data(BaseModel):
-    user: str
+from .my_jinja import templates, mount_static_directory
 
 api = FastAPI()
+mount_static_directory()
 
 origins = [
     "http://localhost",
@@ -24,10 +18,6 @@ api.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
-
-api.mount("/static", StaticFiles(directory="FastAPI/static"), name="static")
-
-templates = Jinja2Templates(directory="FastAPI/templates")
 
 
 @api.get("/")
