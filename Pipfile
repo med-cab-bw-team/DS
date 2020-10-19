@@ -12,6 +12,8 @@ python-dotenv = "*"
 dnspython = "*"
 uvicorn = "*"
 flake8 = "*"
+osmapi = "*"
+jinja2 = "*"
 
 [requires]
 python_version = "3.8"
