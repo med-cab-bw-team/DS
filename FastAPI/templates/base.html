@@ -4,36 +4,41 @@
     <title>gardenapi</title>
     <link rel="stylesheet" href="https://unpkg.com/picnic"/>
   </head>
+  <style>
+    body{
+      background-color: black;
+      color: green;
+    }
+    #one{
+      display: flex;
+      justify-content: flex-start;
+    }
+    input{
+      color: black;
+      margin: 10px;
+    }
+  </style>
   <body>
-    <style>
-      body{
-        background-color: black;
-        color: green;
-      }
-      div{
-        display: flex;
-        justify-content: flex-start;
-      }
-      input{
-        color: black;
-        margin: 10px;
-      }
-      /* img{
-        justify-content: flex-start;
-      } */ 
-    </style>
+    {% block body %}
     <h1>{{ title }}</h1>
-    <div>
+    <article>
+    <div id="one">
       <img src="static/images/pot.png" alt="Pot Leaf">
+      <p><b>To many strains out there to choose from!?</b></p>
+      <br>
+      <br>
       <p>
-        <b>To many strains out there to choose from!?</b>
-      <br>
-      <br>
-          When the choices are to overwhelming,<br> come to the garden
-      and let our A.I. farmer make the selection for you.
-      <input type="text" placeholder="Tell us how you feel.">
+        When the choices are to overwhelming,
+        <br> come to the garden
+        and let our A.I. farmer make the selection for you.
       </p>
+      <form action="/recommendation" method="post">
+        <input id="usr" type="text" name="pred" placeholder="Tell us how you feel.">
+        <!-- <input id="sub" type="submit" value="Submit"> -->
+      </form>
     </div>
+    </article>
+    {% endblock %}
     <!-- <script src="https://cdn.jsdelivr.net/npm/umbrellajs"/> -->
   </body>
 </html

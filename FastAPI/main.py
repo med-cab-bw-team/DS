@@ -1,9 +1,14 @@
 """Main file to drive the API"""
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+
+# testing ##
+from pydantic import BaseModel
+class Data(BaseModel):
+    user: str
 
 api = FastAPI()
 
@@ -25,18 +30,22 @@ api.mount("/static", StaticFiles(directory="FastAPI/static"), name="static")
 templates = Jinja2Templates(directory="FastAPI/templates")
 
 
-@api.get("/", response_class=HTMLResponse)
+@api.get("/")
 async def index(request: Request):
-    return templates.TemplateResponse("base.html",
-                                      {"request": request,
-                                       "title": "Welcome to the GardenAPI"})
+    return templates.TemplateResponse(
+        "base.html",
+        {"request": request,
+        "title": "Welcome to the GardenAPI"}
+    )
 
 
-@api.get("/recommendations/{types}&{flavor}&{effect}")
-def recommendations(types, flavor, effect):
-    form_inputs = {
-        "types": types,
-        "flavor": flavor,
-        "effect": effect}
+@api.post("/recommendation")
+async def predict(request: Request):
     # modeling happens here
-    return form_inputs
+    form = await request.form()
+    pred = form["pred"]
+    return templates.TemplateResponse(
+        "pred.html",
+        {"request": request,
+         "pred": pred}
+    )
