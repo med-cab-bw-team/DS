@@ -2,10 +2,14 @@
     "_meta": {
         "hash": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "sha256": "61d5fc9bf0d835a1e0100752ca336340f0e95da2f37119fb86e5eae0e0458f80"
 =======
             "sha256": "b2f96b9884f7efc6398674c206bd556e3a9b81bc580b39c042f6de188ee317b8"
 >>>>>>> 1744dfb5c69117e7ff90729ff5ebcf10b9859858
+=======
+            "sha256": "8e128dd5872837a5d17bfa53e50ba4e472623eaf3a29f40183317f5cd595c015"
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         },
         "pipfile-spec": 6,
         "requires": {
@@ -20,6 +24,7 @@
         ]
     },
     "default": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "blis": {
             "hashes": [
@@ -80,6 +85,8 @@
             ],
             "version": "==3.0.4"
         },
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         "click": {
             "hashes": [
                 "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a",
@@ -87,23 +94,6 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "version": "==7.1.2"
-        },
-        "cymem": {
-            "hashes": [
-                "sha256:5083b2ab5fe13ced094a82e0df465e2dbbd9b1c013288888035e24fd6eb4ed01",
-                "sha256:622c20a57701d02f01a47e856dea248e112638f28c8249dbe3ed95a9702e3d74",
-                "sha256:6f4cb689a9552e9e13dccc89203c8ab09f210a7ffb92ce27c384a4a0be27b527",
-                "sha256:719f04a11ca709fc2b47868070d79fccff77e5d502ff32de2f4baa73cb16166f",
-                "sha256:7236252bed70f37b898933dcf8aa875d0829664a245a272516f27b30439df71c",
-                "sha256:7f5ddceb12b73f7fd2e4398266401b6f887003740ccd18c989a2af04500b5f2b",
-                "sha256:85b9364e099426bd7f445a7705aad87bf6dbb71d79e3802dd8ca14e181d38a33",
-                "sha256:c288a1bbdf58c360457443e5297e74844e1961e5e7001dbcb3a5297a41911a11",
-                "sha256:cd21ec48ee70878d46c486e2f7ae94b32bfc6b37c4d27876c5a5a00c4eb75c3c",
-                "sha256:d7505c500d994f11662e5595f5002251f572acc189f18944619352e2636f5181",
-                "sha256:dd24848fbd75b17bab06408da6c029ba7cc615bd9e4a1f755fb3a090025fb922",
-                "sha256:f4f19af4bca81f11922508a9dcf30ce1d2aee4972af9f81ce8e5331a6f46f5e1"
-            ],
-            "version": "==2.0.3"
         },
         "dnspython": {
             "hashes": [
@@ -129,14 +119,6 @@
             "index": "pypi",
             "version": "==3.8.4"
         },
-        "folium": {
-            "hashes": [
-                "sha256:540789abc21872469e52c59ac3962c61259a8df557feadd6514eb23eb0a64ca7",
-                "sha256:8a819fe19791411fc7c7202ae597787e7b4b5189b23f43756931d2ff73a48f4a"
-            ],
-            "index": "pypi",
-            "version": "==0.11.0"
-        },
         "h11": {
             "hashes": [
                 "sha256:3c6c61d69c6f13d41f1b80ab0322f1872702a3ba26e12aa864c928f6a43fbaab",
@@ -144,6 +126,7 @@
             ],
             "version": "==0.11.0"
         },
+<<<<<<< HEAD
         "idna": {
             "hashes": [
                 "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
@@ -213,6 +196,8 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.1.1"
         },
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         "mccabe": {
             "hashes": [
                 "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42",
@@ -220,6 +205,7 @@
             ],
             "version": "==0.6.1"
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
         "murmurhash": {
             "hashes": [
@@ -335,6 +321,8 @@
             "version": "==1.3.0"
 >>>>>>> 1744dfb5c69117e7ff90729ff5ebcf10b9859858
         },
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         "pycodestyle": {
             "hashes": [
                 "sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367",
@@ -434,14 +422,6 @@
             "index": "pypi",
             "version": "==3.11.0"
         },
-        "python-dateutil": {
-            "hashes": [
-                "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
-                "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
-            ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-            "version": "==2.8.1"
-        },
         "python-dotenv": {
             "hashes": [
                 "sha256:8c10c99a1b25d9a68058a1ad6f90381a62ba68230ca93966882a4dbc3bc9c33d",
@@ -450,6 +430,7 @@
             "index": "pypi",
             "version": "==0.14.0"
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
         "pytz": {
             "hashes": [
@@ -572,6 +553,8 @@
         },
 =======
 >>>>>>> 1744dfb5c69117e7ff90729ff5ebcf10b9859858
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         "starlette": {
             "hashes": [
                 "sha256:bd2ffe5e37fb75d014728511f8e68ebf2c80b0fa3d04ca1479f4dc752ae31ac9",
@@ -580,6 +563,7 @@
             "markers": "python_version >= '3.6'",
             "version": "==0.13.6"
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
         "thinc": {
             "hashes": [
@@ -631,6 +615,8 @@
             "version": "==1.25.11"
 >>>>>>> 1744dfb5c69117e7ff90729ff5ebcf10b9859858
         },
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         "uvicorn": {
             "hashes": [
                 "sha256:8ff7495c74b8286a341526ff9efa3988ebab9a4b2f561c7438c3cb420992d7dd",
@@ -639,6 +625,7 @@
             "index": "pypi",
 <<<<<<< HEAD
             "version": "==0.12.1"
+<<<<<<< HEAD
         },
         "wasabi": {
             "hashes": [
@@ -649,6 +636,8 @@
 =======
             "version": "==0.12.2"
 >>>>>>> 1744dfb5c69117e7ff90729ff5ebcf10b9859858
+=======
+>>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
         }
     },
     "develop": {}
