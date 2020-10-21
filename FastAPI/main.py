@@ -21,21 +21,11 @@ api.add_middleware(
 
 
 @api.get("/")
-async def index(request: Request):
-    return templates.TemplateResponse(
-        "base.html",
-        {"request": request,
-        "title": "Welcome to the GardenAPI"}
-    )
+async def index():
+    return {"welcome"}
 
 
-@api.post("/recommendation")
-async def predict(request: Request):
+@api.get("/recommendation/{string_of_text}")
+async def predict(string_of_text):
     # modeling happens here
-    form = await request.form()
-    pred = form["pred"]
-    return templates.TemplateResponse(
-        "pred.html",
-        {"request": request,
-         "pred": pred}
-    )
+    return {"result": string_of_text}
