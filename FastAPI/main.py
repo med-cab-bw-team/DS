@@ -14,6 +14,7 @@ origins = [
 api.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_origin_regex='https?://.*',
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
