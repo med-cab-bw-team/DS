@@ -1,8 +1,10 @@
 """Main file to drive the API"""
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
+from .my_jinja import templates, mount_static_directory
 
 api = FastAPI()
+mount_static_directory(api)
 
 origins = [
     "http://localhost",
@@ -19,15 +21,11 @@ api.add_middleware(
 
 
 @api.get("/")
-def index():
-    return {"welcome to the garden"}
+async def index():
+    return {"welcome"}
 
 
-@api.get("/recommendations/{types}&{flavor}&{effect}")
-def recommendations(types, flavor, effect):
-    form_inputs = {
-        "types": types,
-        "flavor": flavor,
-        "effect": effect}
+@api.get("/recommendation/{string_of_text}")
+async def predict(string_of_text):
     # modeling happens here
-    return form_inputs
+    return {"result": string_of_text}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gardenapi</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic"/>
+  </head>
+  <style>
+    body{
+      background-color: black;
+      color: green;
+    }
+    article{
+      display: flex;
+    }
+    input{
+      color: black;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    {% block body %}
+    <h1>{{ title }}</h1>
+    <article>
+    <div id="one">
+      <p><b>To many strains out there to choose from!?</b></p>
+      <p>
+        When the choices are to overwhelming, come to the garden
+        and let our A.I. farmer make the selection for you.
+      </p>
+      <form action="/recommendation" method="post">
+        <input id="usr" type="text" name="pred" placeholder="Tell us how you feel.">
+        <!-- <input id="sub" type="submit" value="Submit"> -->
+      </form>
+    </div>
+    </article>
+    <img src="static/images/pot.png" alt="Pot Leaf">
+    {% endblock %}
+    <!-- <script src="https://cdn.jsdelivr.net/npm/umbrellajs"/> -->
+  </body>
+</html
