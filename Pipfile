@@ -12,13 +12,6 @@ python-dotenv = "*"
 dnspython = "*"
 uvicorn = "*"
 flake8 = "*"
-<<<<<<< HEAD
-osmapi = "*"
-jinja2 = "*"
-aiofiles = "*"
-python-multipart = "*"
-=======
->>>>>>> parent of c6d0c77... Updated pipfile to remove unused branch
 
 [requires]
 python_version = "3.8"
