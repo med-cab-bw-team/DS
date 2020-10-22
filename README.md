@@ -19,8 +19,9 @@ Using the routes supplied can access different functions of the API framework, a
 
     **Routes:**
 `(/):
-    This will bring the user to the home landing page, with just a generic response in json that reads:
-    ![homepage response](/readme_ext/homeroute.png)`
+    This will bring the user to the home landing page, with just a generic response in json that reads:`
+    
+    ![homepage response](/readme_ext/homeroute.png)
 
 `(/recommendation/{user_string_input}):
     This route passes the user input (string format) into the NLP model for a prediction.
