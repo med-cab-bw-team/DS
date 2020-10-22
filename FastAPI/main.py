@@ -1,10 +1,8 @@
 """Main file to drive the API"""
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
-from .my_jinja import templates, mount_static_directory
 
 api = FastAPI()
-mount_static_directory(api)
 
 origins = [
     "http://localhost",
