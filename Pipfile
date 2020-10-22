@@ -13,6 +13,10 @@ dnspython = "*"
 uvicorn = "*"
 flake8 = "*"
 aiofiles = "*"
+pandas = "*"
+numpy = "*"
+sklearn = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.8"
