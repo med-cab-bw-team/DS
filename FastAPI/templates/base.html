@@ -8,29 +8,23 @@
     body{
       background-color: black;
       color: green;
+      margin: 20px;
     }
     article{
       display: flex;
-    }
-    input{
-      color: black;
-      margin: 10px;
+      margin: 20px;
     }
   </style>
   <body>
     {% block body %}
-    <h1>{{ title }}</h1>
+    <h1><b>{{ title }}</b></h1>
     <article>
-    <div id="one">
-      <p><b>To many strains out there to choose from!?</b></p>
+    <div>
       <p>
-        When the choices are to overwhelming, come to the garden
-        and let our A.I. farmer make the selection for you.
+        This API housesa natural language processing model
+        that returns marijuana strain recommendations
+        based on the users prefrences and necessities.
       </p>
-      <form action="/recommendation" method="post">
-        <input id="usr" type="text" name="pred" placeholder="Tell us how you feel.">
-        <!-- <input id="sub" type="submit" value="Submit"> -->
-      </form>
     </div>
     </article>
     <img src="static/images/pot.png" alt="Pot Leaf">
