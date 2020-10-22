@@ -2,6 +2,7 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
 from .my_jinja import templates, mount_static_directory
+from .model import PredictionBot
 
 tags_metadata = [
     {
@@ -25,6 +26,7 @@ api = FastAPI(
 
 # Mount the static directory to be used by templates
 mount_static_directory(api)
+# api.strain_finder = MODEL()
 
 
 api.add_middleware(
