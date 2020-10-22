@@ -1,16 +1,21 @@
 # DS
 
-### Product Vision Document:
+## Product Vision Document:
 
 https://www.notion.so/Product-Vision-Document-a66d0df2767949cea3b37d65e9c04155
+
+
+## API Documentation:
+
+https://greengardenapi.herokuapp.com/docs
 
 
 ### What is MedCab?
 
 This medcab webapp is a microservice API that allows users to describe their ailments and preferences for marijuana use,
-and using an NLP model, gives 5 recommended straings of marijuana.
+and using an NLP model, gives 5 recommended straings of cannabis.
 
-This NLP model uses keywords passed to it from the website front end, runs it through a prediction algorithm that yields a result of the top 5 strains for their needs. The model was trained on a dataset of over 2000 unique strains of marijuana, their type, flavor profiles, descriptions, and known effects. 
+This NLP model uses keywords passed to it from the website front end, runs it through a prediction algorithm that yields a result of the top 5 strains for their needs. The model was trained on a dataset of over 2000 unique strains of cannabis: their type, flavor profiles, descriptions, and known effects. 
 
 ### How does the API work?
 
