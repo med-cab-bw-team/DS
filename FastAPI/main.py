@@ -40,14 +40,7 @@ async def index(request: Request):
     return templates.TemplateResponse(
         "base.html",
         {"request": request,
-        "title": "Welcome to the Green Garden API"}
-    )
-# async def index():
-#     return {
-#         "This API houses \
-# a natural language processing model \
-# that returns marijuana strain recommendations \
-# based on the users prefrences and necessities."}
+        "title": "Welcome to the Green Garden API"})
 
 
 @api.get(
