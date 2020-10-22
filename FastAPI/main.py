@@ -6,12 +6,8 @@ from .model import PredictionBot
 
 api = FastAPI()
 mount_static_directory(api)
-api.strain_finder = PredictionBot()
+# api.strain_finder = MODEL()
 
-origins = [
-    "http://localhost",
-    "https://your-page-here"
-]
 
 api.add_middleware(
     CORSMiddleware,
