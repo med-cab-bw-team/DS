@@ -2,7 +2,7 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
 from .my_jinja import templates, mount_static_directory
-from .model import PredictionBot
+from .model import TheStash
 
 tags_metadata = [
     {
@@ -24,6 +24,8 @@ api = FastAPI(
     version="0.1.0",
     openapi_tags=tags_metadata)
 
+dealer = TheStash()
+
 # Mount the static directory to be used by templates
 mount_static_directory(api)
 # api.strain_finder = MODEL()
@@ -44,9 +46,7 @@ async def index(request: Request):
         {"request": request,
         "title": "Welcome to the Green Garden API"})
 
-
-@api.get(
-    "/recommendation/{string_to_process}",
+@api.get("/recommendation/{string_to_process}",
     tags=["nlpmodel"])
 async def predict(string_to_process) -> str:
     """
@@ -61,5 +61,5 @@ async def predict(string_to_process) -> str:
         recommendations
     """
     # modeling happens here
-    rec = string_to_process.upper()
-    return {"Recommendations": {rec}}
+    rec = dealer.predict(string_to_process)
+    return rec
