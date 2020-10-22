@@ -1,6 +1,7 @@
 """Main module to drive the API"""
 from fastapi import FastAPI, Request, Form
 from fastapi.middleware.cors import CORSMiddleware
+from .my_jinja import templates, mount_static_directory
 
 tags_metadata = [
     {
@@ -22,6 +23,10 @@ api = FastAPI(
     version="0.1.0",
     openapi_tags=tags_metadata)
 
+# Mount the static directory to be used by templates
+mount_static_directory(api)
+
+
 api.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -31,12 +36,18 @@ api.add_middleware(
 
 
 @api.get("/", tags=["root"])
-async def index():
-    return {
-        "This API houses \
-a natural language processing model \
-that returns marijuana strain recommendations \
-based on the users prefrences and necessities."}
+async def index(request: Request):
+    return templates.TemplateResponse(
+        "base.html",
+        {"request": request,
+        "title": "Welcome to the Green Garden API"}
+    )
+# async def index():
+#     return {
+#         "This API houses \
+# a natural language processing model \
+# that returns marijuana strain recommendations \
+# based on the users prefrences and necessities."}
 
 
 @api.get(
