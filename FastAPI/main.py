@@ -53,10 +53,10 @@ async def predict(string_to_process) -> str:
     Takes in 'string_to_process' from an input and
     returns 5 marijuana strain recommendations.
 
-    Args:
+    ### Request:
         string_to_process ([str]): [string input]
 
-    Returns:
+    ### Response:
         List of Dictionaries containing strain
         recommendations
     """
